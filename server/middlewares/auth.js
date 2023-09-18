@@ -4,7 +4,7 @@ const errMessageUnauthorized = require('../utils/constants/constants');
 
 const {
   DEV_SECRET, NODE_ENV, JWT_SECRET,
-} = require('../utils/config/config');
+} = process.env;
 
 module.exports = (req, res, next) => {
   const { authorization } = req.cookies;
